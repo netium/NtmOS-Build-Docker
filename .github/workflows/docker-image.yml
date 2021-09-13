@@ -7,12 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag netium/ntmos-build:latest
+      name: Check out code
+
+    - name: Build and push docker image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: netium/ntmos-build
+        tags: latest
+        registry: docker.io
+        username: ${{ secrets.DOCKERHUB_USER_ID }}
+        password: ${{ secrets.DOCKERHUB_USER_SECRET }}
+#    - name: build 
+#      run: sh /home/runner/work/NtmOS/NtmOS/build.sh
