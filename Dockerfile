@@ -4,7 +4,7 @@ RUN echo $(pwd)
 
 RUN apt update
 
-RUN apt install autoconf gcc mtools build-essential gcc-multilib g++-multilib tar wget -y
+RUN apt install autoconf gcc mtools build-essential gcc-multilib g++-multilib tar parted wget -y
 
 RUN wget -O nasm.tar.gz https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.gz
 
