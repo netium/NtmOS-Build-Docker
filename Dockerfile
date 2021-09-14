@@ -28,6 +28,8 @@ RUN mkdir -p /var/ntmos
 
 COPY ./build.sh /usr/bin/
 
+RUN chmod +x /usr/bin/build.sh
+
 VOLUME /var/ntmos
 
 WORKDIR /var/ntmos
