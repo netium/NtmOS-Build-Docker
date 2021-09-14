@@ -34,4 +34,4 @@ VOLUME /var/ntmos
 
 WORKDIR /var/ntmos
 
-CMD [ "/usr/bin/bash", "-c", "/usr/bin/build.sh" ]
+CMD [ "/usr/bin/bash", "/usr/bin/build.sh" ]
